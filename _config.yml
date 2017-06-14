@@ -1,0 +1,63 @@
+# Site Info
+title: 1nyoung
+tagline: 'Welcome to 1nyoung Blog!'
+description: '개발 블로그'
+baseurl: ""
+url: http://1nyoung.github.io
+logo: '/public/logo.png'
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss    
+paginate: 1
+paginate_path: '/blog/page:num'
+permalink: pretty
+
+version: 1.0.0
+
+# About/contact
+author:
+  name: Inyoung Jo
+  description: <strong>1nyoung</strong> (Inyoung Jo)
+  contact:
+    #linkedin:  
+    github:    https://github.com/1nyoung
+    # facebook:  <hide>
+    #twitter:   
+    #weibo:     
+    email:    mailto:wddjiy777@gmail.com
+
+# Navigation (2nd level links supported)
+nav:
+  dev-Tags:           
+    - '/'
+  Blog:           
+    - '/blog/'
+    - { story: '/blog/categories/#story' }
+    - { dev: '/blog/categories/#dev' }
+    #- { Tags: '/blog/tags/' }
+  About:          
+    - '/about/'
+  #Github Project: 
+    #- 'https://github.com/1nyoung'
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
+hero:
+  image: /public/img/we_will_be_giants_by_yalestewart.jpg
+  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: '' # leave blank if you don't want google analytics
+disqus_short_name: '1nyoung' # leave blank if you don't want disqus
+
