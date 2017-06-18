@@ -40,8 +40,9 @@ nav:
     - '/'
   Blog:           
     - '/blog/'
-    - { story: '/blog/categories/#story' }
     - { dev: '/blog/categories/#dev' }
+    - { story: '/blog/categories/#story' }
+    - { etc: '/blog/categories/#etc' }
     #- { Tags: '/blog/tags/' }
   About:          
     - '/about/'
