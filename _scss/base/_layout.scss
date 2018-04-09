@@ -29,7 +29,8 @@
   .container {
     max-width: 32rem;
     &.content {
-      padding-top: 6.5rem;
+      // head position relative랑 짝궁
+      // padding-top: 6.5rem;
     }
   }
 }
