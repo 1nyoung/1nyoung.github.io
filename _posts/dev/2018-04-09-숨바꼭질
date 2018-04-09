@@ -1,0 +1,65 @@
+---
+layout: post
+title: Example content
+category: dev
+tags: [algorithm]
+comments: true
+---
+
+### 문제
+> 수빈이는 동생과 숨바꼭질을 하고 있다. 수빈이는 현재 점 N(0 ≤ N ≤ 100,000)에 있고, 동생은 점 K(0 ≤ K ≤ 100,000)에 있다. 수빈이는 걷거나 순간이동을 할 수 있다. 만약, 수빈이의 위치가 X일 때 걷는다면 1초 후에 X-1 또는 X+1로 이동하게 된다. 순간이동을 하는 경우에는 1초 후에 2*X의 위치로 이동하게 된다.
+
+수빈이와 동생의 위치가 주어졌을 때, 수빈이가 동생을 찾을 수 있는 가장 빠른 시간이 몇 초 후인지 구하는 프로그램을 작성하시오.
+
+### 입력 & 출력 
+
+> 5 17
+
+> 4
+
+### 코드
+```java
+// 숨바꼭질
+public class p1697 {
+	public static void bfs(int start, int end) {
+		int[] c = new int[100001];
+		Queue<Integer> q = new LinkedList<Integer>();
+		
+		q.add(start);
+		c[start] = 1;
+		
+		while (!q.isEmpty()) {
+			int x = q.remove();
+			if( x == end){
+				System.out.println(x);
+				System.out.println(c[x]-1);
+				return;
+			}else{
+				if( x-1>= 0 && c[x-1] == 0){
+					System.out.println(x-1);
+					q.add(x -1);
+					c[x-1] = c[x] + 1;
+				}
+				if( x+1 <= 100000 && c[x+1] == 0){
+					System.out.println(x+1);
+					q.add(x+1);
+					c[x+1] = c[x] + 1;
+				}
+				if( x*2 <= 100000 && c[x*2] == 0){
+					System.out.println(x*2);
+					q.add(x *2);
+					c[x* 2] = c[x] + 1;
+				}
+			}
+		}
+	}
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		
+		bfs(n, m);
+	}
+}
+```
